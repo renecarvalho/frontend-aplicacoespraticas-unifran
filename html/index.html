@@ -1,70 +1,177 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plataforma de apoio a ONGs - missão, projetos e contato.">
-    <title>ONG Juntos Somos Mais Fortes</title>
-    <link rel="stylesheet" href="../css/main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ONG Juntos Somos Mais Fortes – Projetos, voluntariado e impacto social." />
+    <title>Juntos Somos Mais Fortes</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
 </head>
-<body>
+<body class="app-container">
+
+    <!-- Skip link para acessibilidade -->
     <a href="#conteudo-principal" class="skip-link">Ir para o conteúdo principal</a>
-    <header>
-        <nav role="navigation" aria-label="Navegação principal">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container flex-between">
+
+            <!-- Logo -->
             <h1 class="logo">Juntos Somos Mais Fortes</h1>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-            </ul>
+
+            <!-- Controles de acessibilidade -->
+            <div class="acessibilidade-controles flex">
+                <button id="btn-escuro" class="btn btn-secondary">Modo Escuro</button>
+                <!-- <button id="btn-alto-contraste" class="btn btn-secondary">Alto Contraste</button> -->
+            </div>
+
+            <!-- Menu Desktop -->
+            <nav class="main-nav" aria-label="Menu principal">
+                <a href="index.html">Início</a>
+                <div class="nav-item">
+                    <a href="projetos.html">Projetos</a>
+
+                    <!-- Submenu -->
+                    <div class="submenu" aria-label="Submenu Projetos">
+                        <a href="projetos.html#educacao">Educação</a>
+                        <a href="projetos.html#saude">Saúde</a>
+                        <a href="projetos.html#comunidade">Comunidade</a>
+                    </div>
+                </div>
+                <a href="cadastro.html">Cadastro</a>
+            </nav>
+
+            <!-- Botão Hamburguer para Mobile -->
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+
+        <!-- MENU MOBILE -->
+        <nav class="mobile-nav" id="mobileNav" aria-label="Menu mobile" aria-hidden="true">
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="cadastro.html">Cadastro</a>
         </nav>
     </header>
 
-    <main id="conteudo-principal" tabindex="-1">
-        <section class="hero">
+    <!-- MAIN -->
+    <main id="conteudo-principal">
+
+        <!-- HERO -->
+        <section class="hero container">
             <h2>Transformando vidas através da solidariedade</h2>
-            <p>Conheça nossos projetos sociais e faça parte dessa mudança.</p>
-            <img src="../imagens/hero.jpg" alt="Voluntários trabalhando em ação social" loading="lazy">
+            <p class="lead">Conheça nossos projetos sociais e faça parte dessa mudança.</p>
+            <img src="imagens/hero.jpg" alt="Ação social da ONG" />
         </section>
 
-        <section class="sobre">
+        <!-- SOBRE -->
+        <section class="section container stack">
             <h2>Sobre a ONG</h2>
             <p>
-                Somos uma organização dedicada ao impacto social, atuando em comunidades vulneráveis
-                por meio de projetos de educação, saúde, cultura e sustentabilidade.
+                A ONG Juntos Somos Mais Fortes atua em comunidades de alta vulnerabilidade promovendo
+                ações de educação, cultura, alimentação e desenvolvimento humano.
             </p>
-            <article>
-                <h3>Missão</h3>
-                <p>Promover transformação social através de ações voluntárias organizadas.</p>
-            </article>
-            <article>
-                <h3>Visão</h3>
-                <p>Ser referência em impacto social e inclusão comunitária no Brasil.</p>
-            </article>
-            <article>
-                <h3>Valores</h3>
-                <ul>
-                    <li>Transparência</li>
-                    <li>Empatia</li>
-                    <li>Responsabilidade Social</li>
-                    <li>Inclusão</li>
-                </ul>
-            </article>
+
+            <div class="grid">
+                <div class="col-4 stack">
+                    <h3>Missão</h3>
+                    <p>Transformar vidas e fortalecer comunidades por meio de projetos sociais relevantes.</p>
+                </div>
+                <div class="col-4 stack">
+                    <h3>Visão</h3>
+                    <p>Ser referência nacional em impacto social sustentável.</p>
+                </div>
+                <div class="col-4 stack">
+                    <h3>Valores</h3>
+                    <ul>
+                        <li>Empatia</li>
+                        <li>Transparência</li>
+                        <li>Responsabilidade Social</li>
+                        <li>Inclusão</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section class="contato">
-            <h2>Informações de Contato</h2>
-            <address>
-                <p><strong>Email:</strong> contato@vidasolidaria.org</p>
-                <p><strong>Telefone:</strong> (16) 90000-0000</p>
-                <p><strong>Endereço:</strong> Rua Esperança, 123 - Ribeirão Preto, SP</p>
-            </address>
-            <img src="../imagens/contato.jpg" alt="Equipe da ONG em atendimento comunitário" loading="lazy">
+        <!-- CARDS DE PROJETOS -->
+        <section class="section container">
+            <h2>Projetos em Destaque</h2>
+            <div class="cards-grid">
+
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-media">
+                        <img src="imagens/projeto1.jpg" alt="Projeto Educação" />
+                    </div>
+                    <div class="card-body">
+                        <h3>Educação para Todos</h3>
+                        <p class="card-meta">Categoria: Educação</p>
+                        <p>
+                            Aulas de reforço escolar e inclusão digital para jovens em situação de vulnerabilidade.
+                        </p>
+                    </div>
+                    <button class="btn btn-primary">Saiba Mais</button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-media">
+                        <img src="imagens/projeto2.jpg" alt="Projeto Saúde" />
+                    </div>
+                    <div class="card-body">
+                        <h3>Saúde Comunitária</h3>
+                        <p class="card-meta">Categoria: Saúde</p>
+                        <p>
+                            Atendimentos básicos, doação de kits de higiene e palestras de saúde preventiva.
+                        </p>
+                    </div>
+                    <button class="btn btn-primary">Saiba Mais</button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-media">
+                        <img src="imagens/projeto3.jpg" alt="Projeto Alimentação" />
+                    </div>
+                    <div class="card-body">
+                        <h3>Cestas Solidárias</h3>
+                        <p class="card-meta">Categoria: Alimentação</p>
+                        <p>
+                            Distribuição de alimentos para famílias em extrema pobreza.
+                        </p>
+                    </div>
+                    <button class="btn btn-primary">Saiba Mais</button>
+                </div>
+
+            </div>
         </section>
+
+        <!-- CONTATO -->
+        <section class="section container stack">
+            <h2>Contato</h2>
+            <address class="stack">
+                <p><strong>Email:</strong> contato@juntossomosmaisfortes.org</p>
+                <p><strong>Telefone:</strong> (16) 90000-0000</p>
+                <p><strong>Endereço:</strong> Rua Solidariedade, 123 – Ribeirão Preto, SP</p>
+            </address>
+            <img src="imagens/contato.jpg" alt="Equipe da ONG realizando ações sociais" />
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2025 Juntos Somos Mais Fortes - Todos os direitos reservados.</p>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Juntos Somos Mais Fortes — Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <!-- <script src="js/acessibilidade.js"></script> -->
+    <!-- <script src="js/menu.js"></script> -->
+    <script src="../js/main.js"></script>
 </body>
 </html>
