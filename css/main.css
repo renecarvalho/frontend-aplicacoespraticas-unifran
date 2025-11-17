@@ -1,0 +1,178 @@
+/* ==========================
+   CSS ACESSÍVEL – WCAG 2.1 AA
+   ========================== */
+
+/* -------------------------- */
+/* VARIÁVEIS DE TEMA */
+/* -------------------------- */
+:root {
+    /* Cores padrão (contraste 4.5:1) */
+    --cor-fundo: #ffffff;
+    --cor-texto: #1a1a1a;
+    --cor-primaria: #0055aa;
+    --cor-primaria-clara: #e3f1ff;
+    --cor-foco: #ffbf47;
+
+    /* Modo escuro */
+    --dark-fundo: #121212;
+    --dark-texto: #ffffff;
+    --dark-primaria: #4da3ff;
+
+    /* Alto contraste */
+    --hc-fundo: #000000;
+    --hc-texto: #ffffff;
+    --hc-primaria: #00ff00;
+}
+
+/* -------------------------- */
+/* RESET BÁSICO */
+/* -------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* -------------------------- */
+/* SKIP LINK */
+/* -------------------------- */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 1000;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* -------------------------- */
+/* NAVEGAÇÃO */
+/* -------------------------- */
+nav {
+    background: var(--cor-primaria);
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:focus,
+nav a:hover {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 3px;
+}
+
+/* -------------------------- */
+/* SEÇÕES */
+/* -------------------------- */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero img,
+.contato img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+article ul {
+    margin-left: 20px;
+    list-style: disc;
+}
+
+/* -------------------------- */
+/* RODAPÉ */
+/* -------------------------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--cor-primaria);
+    color: #fff;
+}
+
+/* -------------------------- */
+/* FOCUS VISÍVEL */
+/* -------------------------- */
+:focus {
+    outline: 3px solid var(--cor-foco);
+    outline-offset: 3px;
+}
+
+/* -------------------------- */
+/* MODO ESCURO */
+/* -------------------------- */
+body.modo-escuro {
+    background: var(--dark-fundo);
+    color: var(--dark-texto);
+}
+
+body.modo-escuro nav {
+    background: var(--dark-primaria);
+}
+
+body.modo-escuro footer {
+    background: var(--dark-primaria);
+}
+
+/* -------------------------- */
+/* ALTO CONTRASTE */
+/* -------------------------- */
+body.alto-contraste {
+    background: var(--hc-fundo) !important;
+    color: var(--hc-texto) !important;
+}
+
+body.alto-contraste nav,
+body.alto-contraste footer {
+    background: var(--hc-fundo) !important;
+    border-bottom: 2px solid var(--hc-texto);
+}
+
+body.alto-contraste a {
+    color: var(--hc-primaria) !important;
+}
+
+/* -------------------------- */
+/* RESPONSIVIDADE */
+/* -------------------------- */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
