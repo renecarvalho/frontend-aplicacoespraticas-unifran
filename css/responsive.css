@@ -1,0 +1,202 @@
+/* =====================================================
+   CSS RESPONSIVO — MOBILE FIRST (HTML empilha no celular)
+   ONG Juntos Somos Mais Fortes
+===================================================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* -----------------------------------------------------
+   ESTRUTURA BASE — MOBILE FIRST
+----------------------------------------------------- */
+.container {
+    width: 100%;
+    padding: 16px;
+}
+
+.stack > * + * {
+    margin-top: 16px;
+}
+
+/* Força qualquer layout lado a lado a empilhar no mobile */
+.flex,
+.flex-between,
+.grid,
+.cards-grid {
+    display: block;
+}
+
+/* -----------------------------------------------------
+   HEADER
+----------------------------------------------------- */
+.header {
+    background: #0055aa;
+    color: #fff;
+    padding: 16px;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+/* Menu desktop some no mobile */
+.main-nav {
+    display: none;
+}
+
+/* Menu mobile */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.hamburger .bar {
+    width: 100%;
+    height: 4px;
+    background: #fff;
+}
+
+/* Menu mobile fechado */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    background: #0055aa;
+    padding: 16px;
+}
+
+/* Menu mobile aberto */
+.mobile-nav.open {
+    display: flex;
+}
+
+/* -----------------------------------------------------
+   HERO
+----------------------------------------------------- */
+.hero {
+    text-align: center;
+    margin-top: 16px;
+}
+.hero h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+.hero .lead {
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+/* -----------------------------------------------------
+   SEÇÕES
+----------------------------------------------------- */
+.section {
+    margin-top: 32px;
+}
+.section h2 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* -----------------------------------------------------
+   CARDS — Mobile: 1 por linha
+----------------------------------------------------- */
+.cards-grid {
+    width: 100%;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+.card-body h3 {
+    margin-bottom: 8px;
+}
+
+/* .btn {
+    padding: 10px 16px;
+    background: #0055aa;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+} */
+
+/* -----------------------------------------------------
+   CONTATO
+----------------------------------------------------- */
+address p {
+    margin-bottom: 4px;
+}
+
+/* -----------------------------------------------------
+   BREAKPOINTS — RESPONSIVIDADE REAL
+----------------------------------------------------- */
+
+/* Tablets – 768px */
+@media (min-width: 768px) {
+
+    .main-nav {
+        display: flex;
+        gap: 24px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: none !important;
+    }
+
+    /* Grid padrão 2 colunas */
+    .grid,
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .flex-between {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Desktop — 992px */
+@media (min-width: 992px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large Desktop — 1200px */
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+        margin: auto;
+    }
+}

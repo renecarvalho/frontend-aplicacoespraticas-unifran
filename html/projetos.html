@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Juntos Somos Mais Fortes</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="app-container">
+
+    <!-- Skip link -->
+    <a href="#conteudo-principal" class="skip-link">Ir para o conteúdo principal</a>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container flex-between">
+            <h1 class="logo">Juntos Somos Mais Fortes</h1>
+
+            <div class="acessibilidade-controles flex">
+                <button id="btn-escuro" class="btn btn-secondary">Modo Escuro</button>
+                <!-- <button id="btn-alto-contraste" class="btn btn-secondary">Alto Contraste</button> -->
+            </div>
+
+            <nav class="main-nav" aria-label="Menu principal">
+                <a href="index.html">Início</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="cadastro.html">Cadastro</a>
+            </nav>
+
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+
+        <nav class="mobile-nav" id="mobileNav" aria-label="Menu mobile" aria-hidden="true">
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="cadastro.html">Cadastro</a>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main id="conteudo-principal" class="container section">
+        <h2>Projetos da ONG</h2>
+
+        <!-- Filtro de categorias -->
+        <div class="filter-area stack" style="margin-bottom:24px;">
+            <label for="filtroCategoria"><strong>Filtrar por categoria:</strong></label>
+            <select id="filtroCategoria" class="filtro-select">
+                <option value="todas">Todas</option>
+                <option value="educacao">Educação</option>
+                <option value="saude">Saúde</option>
+                <option value="comunidade">Comunidade</option>
+            </select>
+        </div>
+        <p>Veja abaixo nossos projetos organizados por categoria.</p>
+
+        <!-- ============================== -->
+        <!-- EDUCAÇÃO -->
+        <h3 id="educacao" class="section">Educação</h3>
+        <div class="cards-grid">
+            <div class="card">
+                <img src="imagens/projeto1.jpg" alt="Reforço escolar" />
+                <div class="card-body">
+                    <h4>Reforço Escolar</h4>
+                    <p>Aulas gratuitas para alunos do ensino fundamental.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/projeto2.jpg" alt="Inclusão digital" />
+                <div class="card-body">
+                    <h4>Inclusão Digital</h4>
+                    <p>Laboratório de informática para crianças e jovens.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/projeto3.jpg" alt="Leitura comunitária" />
+                <div class="card-body">
+                    <h4>Leitura Comunitária</h4>
+                    <p>Biblioteca comunitária acessível a todos.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================== -->
+        <!-- SAÚDE -->
+        <h3 id="saude" class="section">Saúde</h3>
+        <div class="cards-grid">
+            <div class="card">
+                <img src="imagens/projeto4.jpg" alt="Atendimento básico" />
+                <div class="card-body">
+                    <h4>Atendimento Básico</h4>
+                    <p>Equipe voluntária oferecendo cuidados essenciais.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/projeto5.jpg" alt="Palestra de prevenção" />
+                <div class="card-body">
+                    <h4>Saúde Preventiva</h4>
+                    <p>Palestras sobre prevenção de doenças e bem-estar.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/projeto6.jpg" alt="Doação de kits" />
+                <div class="card-body">
+                    <h4>Doação de Kits</h4>
+                    <p>Distribuição de kits de higiene para famílias carentes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================== -->
+        <!-- COMUNIDADE -->
+        <h3 id="comunidade" class="section">Comunidade</h3>
+        <div class="cards-grid">
+            <div class="card">
+                <img src="imagens/projeto7.jpg" alt="Cestas solidárias" />
+                <div class="card-body">
+                    <h4>Cestas Solidárias</h4>
+                    <p>Distribuição de alimentos a famílias em vulnerabilidade.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/projeto8.jpg" alt="Mutirão" />
+                <div class="card-body">
+                    <h4>Mutirão Comunitário</h4>
+                    <p>Ações de limpeza e revitalização de espaços públicos.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagens/projeto9.jpg" alt="Festival cultural" />
+                <div class="card-body">
+                    <h4>Festival Cultural</h4>
+                    <p>Evento anual com apresentações artísticas e culturais.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Juntos Somos Mais Fortes — Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/projetos.js"></script>
+</body>
+</html>

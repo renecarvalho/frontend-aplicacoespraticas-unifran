@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Projetos - Juntos Somos Mais Fortes</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="app-container">
+
+    <!-- Skip link -->
+    <a href="#conteudo-principal" class="skip-link">Ir para o conteúdo principal</a>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container flex-between">
+            <h1 class="logo">Juntos Somos Mais Fortes</h1>
+
+            <!-- Botões de acessibilidade -->
+            <div class="acessibilidade-controles flex">
+                <button id="btn-escuro" class="btn btn-secondary">Modo Escuro</button>
+                <!-- <button id="btn-alto-contraste" class="btn btn-secondary">Alto Contraste</button> -->
+            </div>
+
+            <!-- Menu Desktop -->
+            <nav class="main-nav" aria-label="Menu principal">
+                <a href="index.html">Início</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="cadastro.html">Cadastro</a>
+            </nav>
+
+            <!-- Menu Mobile -->
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+
+        <nav class="mobile-nav" id="mobileNav" aria-label="Menu mobile" aria-hidden="true">
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="cadastro.html">Cadastro</a>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main id="conteudo-principal" class="container section">
+        <h2>Cadastro de Projetos</h2>
+        <p>Preencha as informações abaixo para cadastrar um novo projeto na plataforma.</p>
+
+        <form class="stack" method="post" enctype="multipart/form-data">
+
+            <!-- Categoria -->
+            <label for="categoria">Categoria do Projeto*</label>
+            <select id="categoria" name="categoria" required>
+                <option value="">Selecione...</option>
+                <option value="educacao">Educação</option>
+                <option value="saude">Saúde</option>
+                <option value="alimentacao">Alimentação</option>
+                <option value="comunidade">Comunidade</option>
+            </select>
+
+            <!-- Título -->
+            <label for="titulo">Título do Projeto*</label>
+            <input class="input" type="text" id="titulo" name="titulo" required placeholder="Digite o título do projeto">
+
+            <!-- Descrição -->
+            <label for="descricao">Descrição*</label>
+            <textarea id="descricao" name="descricao" rows="5" required placeholder="Descreva o projeto"></textarea>
+
+            <!-- Foto -->
+            <label for="foto">Foto (Imagem ilustrativa)*</label>
+            <input class="input" type="file" id="foto" name="foto" accept="image/*" required>
+
+            <!-- Link do YouTube -->
+            <label for="youtube">Link do vídeo no YouTube</label>
+            <input class="input" type="url" id="youtube" name="youtube" placeholder="https://youtube.com/...">
+
+            <!-- Responsável -->
+            <label for="responsavel">Nome do Responsável*</label>
+            <input class="input" type="text" id="responsavel" name="responsavel" required>
+
+            <!-- Telefone -->
+            <label for="telefone">Telefone do Responsável*</label>
+            <input class="input" type="tel" id="telefone" name="telefone" required placeholder="(00) 90000-0000">
+
+            <!-- Email -->
+            <label for="email">Email do Responsável*</label>
+            <input class="input" type="email" id="email" name="email" required placeholder="email@exemplo.com">
+
+            <p>* Campos obrigatórios</p>
+
+            <!-- Botão -->
+            <button type="submit" class="btn btn-primary">Cadastrar Projeto</button>
+
+        </form>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Juntos Somos Mais Fortes — Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
