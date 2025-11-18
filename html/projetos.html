@@ -14,19 +14,33 @@
     <!-- HEADER -->
     <header class="header">
         <div class="container flex-between">
+
+            <!-- Logo -->
             <h1 class="logo">Juntos Somos Mais Fortes</h1>
 
+            <!-- Controles de acessibilidade -->
             <div class="acessibilidade-controles flex">
                 <button id="btn-escuro" class="btn btn-secondary">Modo Escuro</button>
                 <!-- <button id="btn-alto-contraste" class="btn btn-secondary">Alto Contraste</button> -->
             </div>
 
+            <!-- Menu Desktop -->
             <nav class="main-nav" aria-label="Menu principal">
                 <a href="index.html">Início</a>
-                <a href="projetos.html">Projetos</a>
+                <div class="nav-item">
+                    <a href="projetos.html">Projetos</a>
+
+                    <!-- Submenu -->
+                    <div class="submenu" aria-label="Submenu Projetos">
+                        <a href="projetos.html#educacao">Educação</a>
+                        <a href="projetos.html#saude">Saúde</a>
+                        <a href="projetos.html#comunidade">Comunidade</a>
+                    </div>
+                </div>
                 <a href="cadastro.html">Cadastro</a>
             </nav>
 
+            <!-- Botão Hamburguer para Mobile -->
             <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -34,6 +48,7 @@
             </button>
         </div>
 
+        <!-- MENU MOBILE -->
         <nav class="mobile-nav" id="mobileNav" aria-label="Menu mobile" aria-hidden="true">
             <a href="index.html">Início</a>
             <a href="projetos.html">Projetos</a>
@@ -62,14 +77,14 @@
         <h3 id="educacao" class="section">Educação</h3>
         <div class="cards-grid">
             <div class="card">
-                <img src="imagens/projeto1.jpg" alt="Reforço escolar" />
+                <img src="../imagens/reforco.jpeg" alt="Reforço escolar" />
                 <div class="card-body">
                     <h4>Reforço Escolar</h4>
                     <p>Aulas gratuitas para alunos do ensino fundamental.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="imagens/projeto2.jpg" alt="Inclusão digital" />
+                <img src="../imagens/inclusao.webp" alt="Inclusão digital" />
                 <div class="card-body">
                     <h4>Inclusão Digital</h4>
                     <p>Laboratório de informática para crianças e jovens.</p>
