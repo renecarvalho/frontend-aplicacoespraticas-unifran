@@ -77,7 +77,7 @@ img {
     display: none;
     flex-direction: column;
     gap: 16px;
-    background: #0055aa;
+    background: white;
     padding: 16px;
 }
 
