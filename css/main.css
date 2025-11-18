@@ -208,7 +208,7 @@ p,li,button,input,select,textarea{font-size:var(--fs-base)}
 .form .field-help{font-size:var(--fs-sm);color:var(--color-muted)}
 
 /* validação nativa & mensagens */
-.input:invalid{border-color:var(--color-danger)}
+.input.invalid{border-color:var(--color-danger)}
 
 /* -----------------------------
    ALERTS, TOASTS, MODALS (feedback components)

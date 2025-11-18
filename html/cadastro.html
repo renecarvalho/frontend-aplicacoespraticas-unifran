@@ -52,7 +52,7 @@
         <form class="stack" method="post" enctype="multipart/form-data">
 
             <!-- Categoria -->
-            <label for="categoria">Categoria do Projeto</label>
+            <label for="categoria">Categoria do Projeto*</label>
             <select id="categoria" name="categoria" required>
                 <option value="">Selecione...</option>
                 <option value="educacao">Educação</option>
@@ -62,32 +62,34 @@
             </select>
 
             <!-- Título -->
-            <label for="titulo">Título do Projeto</label>
-            <input type="text" id="titulo" name="titulo" required placeholder="Digite o título do projeto">
+            <label for="titulo">Título do Projeto*</label>
+            <input class="input" type="text" id="titulo" name="titulo" required placeholder="Digite o título do projeto">
 
             <!-- Descrição -->
-            <label for="descricao">Descrição</label>
+            <label for="descricao">Descrição*</label>
             <textarea id="descricao" name="descricao" rows="5" required placeholder="Descreva o projeto"></textarea>
 
             <!-- Foto -->
-            <label for="foto">Foto (Imagem ilustrativa)</label>
-            <input type="file" id="foto" name="foto" accept="image/*" required>
+            <label for="foto">Foto (Imagem ilustrativa)*</label>
+            <input class="input" type="file" id="foto" name="foto" accept="image/*" required>
 
             <!-- Link do YouTube -->
             <label for="youtube">Link do vídeo no YouTube</label>
-            <input type="url" id="youtube" name="youtube" placeholder="https://youtube.com/..." required>
+            <input class="input" type="url" id="youtube" name="youtube" placeholder="https://youtube.com/...">
 
             <!-- Responsável -->
-            <label for="responsavel">Nome do Responsável</label>
-            <input type="text" id="responsavel" name="responsavel" required>
+            <label for="responsavel">Nome do Responsável*</label>
+            <input class="input" type="text" id="responsavel" name="responsavel" required>
 
             <!-- Telefone -->
-            <label for="telefone">Telefone do Responsável</label>
-            <input type="tel" id="telefone" name="telefone" required placeholder="(00) 90000-0000">
+            <label for="telefone">Telefone do Responsável*</label>
+            <input class="input" type="tel" id="telefone" name="telefone" required placeholder="(00) 90000-0000">
 
             <!-- Email -->
-            <label for="email">Email do Responsável</label>
-            <input type="email" id="email" name="email" required placeholder="email@exemplo.com">
+            <label for="email">Email do Responsável*</label>
+            <input class="input" type="email" id="email" name="email" required placeholder="email@exemplo.com">
+
+            <p>* Campos obrigatórios</p>
 
             <!-- Botão -->
             <button type="submit" class="btn btn-primary">Cadastrar Projeto</button>
